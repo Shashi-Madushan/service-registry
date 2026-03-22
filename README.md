@@ -4,7 +4,7 @@ A service discovery server built on Netflix Eureka. All microservices register t
 
 ## About
 
-This project is part of the Enterprise Cloud Application (ECA) module in the Higher Diploma in Software Engineering (HDSE) program at the Institute of Software Engineering (IJSE). It is intended exclusively for students enrolled in this program.
+The Service-Registry is a Netflix Eureka-based service discovery component that enables automatic registration and discovery of microservices. It maintains a registry of all running service instances and their health status, facilitating dynamic service location and load balancing across the ECA microservices ecosystem.
 
 ## Tech Stack
 
@@ -48,6 +48,12 @@ Follow the lecture guidelines, refer to the lecture video for more information a
 
 The Eureka dashboard will be available at: `http://localhost:9001`
 
-## Need Help?
+## Troubleshoot
 
-If you encounter any issues, feel free to reach out and start a discussion via the Slack workspace.
+| Issue | Solution |
+|---|---|
+| Service fails to start | Verify Config-Server is running on port 9000 before starting Service-Registry |
+| Services not registering | Check network connectivity and Eureka client configuration in service YAML files |
+| Eureka dashboard not accessible | Confirm port 9001 is not in use by another process |
+| Config fetch timeout | Verify `spring.cloud.config.uri` points to correct Config-Server URL |
+| Services showing as DOWN | Check service health endpoints and database connectivity for domain services |
