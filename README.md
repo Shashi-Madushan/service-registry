@@ -38,7 +38,9 @@ Follow the lecture guidelines, refer to the lecture video for more information a
 **Startup order:**
 1. Config-Server (`9000`)
 2. **Service-Registry** (`9001`)
-3. Other services...
+3. IAM-Service
+4. Product-Service
+5. Order-Service
 
 ```bash
 ./mvnw spring-boot:run
