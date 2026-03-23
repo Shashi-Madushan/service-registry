@@ -2,8 +2,6 @@ spring:
   application:
     name: service-registry
 
-  profiles:
-    active: ${SPRING_PROFILES_ACTIVE:dev}
 
   config:
     import: "configserver:"
@@ -11,4 +9,3 @@ spring:
   cloud:
     config:
        uri: http://config.platform:9000
-#       uri: http://localhost:9000
